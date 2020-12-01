@@ -25,6 +25,7 @@ dataset$Purchased = factor(dataset$Purchased,
 
 
 # Dividir los datos en entrenamiento y en test
+library(caTools)
 set.seed(123)
 split = sample.split(dataset$Purchased, SplitRatio = 0.8)
 training_set = subset(dataset, split == TRUE)
